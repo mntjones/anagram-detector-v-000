@@ -8,11 +8,8 @@ class Anagram
   
   def match(list)
     match_array = []
-    compare_word = @word.split("").sort
-    compare_match = []
     list.each do |ana|
-      compare_match = ana.split("").sort
-      if compare_match == compare_word
+      if ana.split("").sort == @word.split("").sort
         match_array << ana
       end
     end
